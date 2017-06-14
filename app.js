@@ -7,6 +7,6 @@ app.get("/", function(req, res) {
 	res.render("index.ejs", {phraseVar: phrase});
 });
 
-var server = app.listen(8080,function(){
+var server = app.listen(process.env.PORT || 3000,function(){
    console.log('express server listening on port ' + server.address().port);
 });
